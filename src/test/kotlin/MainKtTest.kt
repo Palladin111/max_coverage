@@ -9,7 +9,7 @@ class MainKtTest {
 
         val comission = getMoneyComission(typeCard = "Vk pay", previousСash = 0f, moneyTransfer)
 
-        assertEquals(25f, comission) // 0f
+        assertEquals(0f, comission)
     }
 
     @Test
@@ -20,7 +20,7 @@ class MainKtTest {
 
         val comission = getMoneyComission(typeCard, previousСash, moneyTransfer)
 
-        assertEquals(0f, comission) // 37.5f
+        assertEquals(37.5f, comission)
     }
 
     @Test
@@ -42,7 +42,7 @@ class MainKtTest {
 
         val comission = getMoneyComission(typeCard, previousСash, moneyTransfer)
 
-        assertEquals(25f, comission) // 50f
+        assertEquals(50f, comission)
     }
 
     @Test
@@ -141,6 +141,6 @@ class MainKtTest {
 
         val comission = getMoneyComission(typeCard, previousСash, moneyTransfer)
 
-        assertEquals(28f, comission) //-1f
+        assertEquals(-1f, comission)
     }
 }
